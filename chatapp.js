@@ -297,7 +297,7 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://timesofindia.indiati
         let items = data.items;
         let titles = ''
         for (let i = 0; i < items.length; i++) {
-            titles += items[i].title + `<img src="like.png" id="like" class="like-btn"><img src="images.png" id="unlike" class="unlike-btn"></br> </br>`
+            titles += items[i].title + `<img src="/images/like.png" id="like" class="like-btn"><img src="/images/images.png" id="unlike" class="unlike-btn"></br> </br>`
         }
         display.innerHTML = titles
         let like_btn = document.querySelectorAll('.like-btn')
