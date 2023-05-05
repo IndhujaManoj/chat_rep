@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CHAT</title>
+        <link rel="stylesheet" href="alter.css">
+    </head>
+
+    <body>
+        <h1 id="first">WELCOME TO CHAT APPLICATION</h1>
+        <div id="page1">
+            <form id="loginpg">
+                <h2 id="loghead">LOGIN PAGE</h2>
+                <label for="name" style="color: black;"> NAME : </label><input type="text" id="uname"><br>
+                <label for="password" style="color: black;">PASSWORD : </label><input type="password" id="password"><br>
+
+                <button type="button" onclick="loginHandling(event)" id="loginButton">login</button>
+                <button type="button" id="log" onclick="hideLogin()">Create account</button>
+
+            </form>
+        </div>
+        <div id="page2">
+            <form id="form2">
+                        <h2 id="reg">Registation Page</h2>
+
+                <div id="1">
+                    <label>USERNAME : </label><input style="padding-left: 28px;" type="text" id="name">
+                    <div id="n1" style="color: red"></div><br><br>
+                </div>
+
+                <div id="2">
+                    <label>EMAIL : </label><input type="email" id="mail">
+                    <div id="n2" style="color: red"></div><br><br>
+                </div>
+
+                <div id="3">
+                    <label>PASSWORD : </label><input style="padding-left: -50px;" type="text" id="psw">
+                    <div id="n3" style="color: red"></div><br><br>
+                </div>
+
+                <div id="4">
+                    <label>RE-ENTER PASSWORD : </label><input type="text" id="new1">
+                    <div id="n4" style="color: red"></div><br><br>
+                </div>
+
+                <div id="5">
+                    <label>PHONE NO : </label><input type="number" id="no" placeholder="Enter 10 digit Phone No">
+                    <div id="n5" style="color: red"></div><br><br>
+                </div>
+                <div style="display: flex;justify-content: center;">
+                    <button type="button" id="regbut" onclick="hideReg(),registation(event),inputClear()">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id="page4">
+            <div class="head">
+                <h1 id="app">CHAT APPLICATION</h1>
+                <div class="ava">
+                    <img src="avatar.jpeg" alt="avatar" class="avatar" id="avatar">
+                    <h2 class="h2">Profile</h2>
+                </div>
+                <div class="img">
+                    <img src="chat.png" class="rounded float-left" alt="chat" width="450px" id="img1">
+                    <img src="news.png" class="rounded float-right" alt="news" width="500px" id="img2">
+                </div>
+            </div>
+        </div>
+        <div id="page5">
+            <h1 class="gp">Group Chat</h1>
+            <div id="chat-container">
+                <div id="chat"></div>
+    
+            </div>
+            <div id="input-container">
+                <div class="input">
+                    <input type="text" id="message-input">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+             <div class="logout">
+                <button id="logout-button">logout</button>
+            </div>
+        </div>
+        <div id="page6">
+            <div id="show">
+            
+                <div id="body">
+                  <div id="container"></div>
+                </div>
+                <div id="buttons">
+                    <button id="head1" onclick="uptades()">Likes & unlike</button>
+                </div>
+                <table id="table"></table>
+                <table id="unlikes"></table>
+                   </div>
+        </div>
+        <div id="page7">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <div class="card">
+          <img src="avatar.jpeg" alt="John" style="width:100%">
+          <h1 id="head"></h1>
+          <p class="title">CEO & Founder, Example</p>
+          <p>Harvard University</p>
+          
+          <p><button onclick="pass()">update profile</button></p>
+        </div>
+        </div>
+        </body>
+        
+
+    <script src="alter.js"></script>
+       
+
+
+    </html>
