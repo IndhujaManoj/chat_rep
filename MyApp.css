@@ -1,0 +1,429 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#first {
+    text-align: center;
+    background-color: darkgray;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+#page1 {
+    display: block;
+    background-image: url(blue.jpg);
+    background-size: cover;
+    height: 95vh;
+}
+
+#loghead {
+    color: wheat;
+}
+
+#loginpg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.iconimg {
+    width: 50px;
+    height: 50x;
+    animation: move-left-right 2s infinite;
+
+}
+
+@keyframes move-left-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#uname,
+#password {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 250px;
+
+}
+
+#log {
+    margin: 10px;
+    color: aliceblue;
+    cursor: pointer;
+
+}
+
+#log:hover {
+    background-color: rgb(231, 15, 177);
+}
+
+#loginpg label {
+    padding: 20px;
+}
+
+#loginButton {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginButton:hover {
+    background-color: navy;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+#page2 {
+    display: none;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+background-size: cover;
+height: 90vh;
+}
+#form2{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 10px;
+
+}
+#form2 input{
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 200px;
+    background-color:lightskyblue;
+}
+#regbut{
+    background-color: rgb(29, 204, 216);
+    color: rgb(14, 13, 14);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#regbut:hover{
+    background-color:blue;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+#page4 {
+    display: none;
+    background: rgb(10,9,23);
+    background: linear-gradient(90deg, rgba(10,9,23,0.9598039899553571) 0%, rgba(49,215,162,1) 5%, rgba(150,185,35,0.6180672952774859) 35%, rgba(0,212,255,1) 100%); 
+    width: 100vw;
+    height: 90vh;
+}
+#app{
+    background-color: none;
+    color: #000;
+  }
+  #mainlog{
+    display: flex;
+    justify-content: center;
+  }
+  #outPage{
+    padding: 10px;
+  background-color:blueviolet;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  }
+  .head {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  #img1 {
+    margin-top: 50px;
+    padding-right: 100px;
+    width: 30%;
+  }
+  #img2{
+    width: 30%;
+  }
+  
+  .head .img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .avatar {
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 1600px;
+  }
+  .h2 {
+    display: flex;
+    margin-left: 1600px;}
+    
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+#page5 {
+    display: none;
+    background-image: url(images.jpeg);
+    
+    }
+    /* Style for the header */
+   .gp {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: wheat;
+      margin-top: 30px;
+    }
+    .logout{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    #logout-button{
+      padding: 10px;
+      background-color: #20148b;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    /* Style for the chat container */
+    #chat-container {
+      height: 700px;
+      border: 1px solid #ddd;
+      overflow-y: scroll;
+      padding: 10px;
+      margin: auto;
+      text-align: right;
+      background-image: url(whatssapp.webp);
+    width: 500px;
+    border-radius: 7px;
+    }
+   /* Style for the input container */
+#input-container {
+    display: flex;
+    justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+    
+  }
+  
+  /* Style for the message input field */
+  #message-input {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #0e0e0f;
+    color: white;
+    
+  }
+  
+  /* Style for the send button */
+  #send-button {
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+   font-size: 16px;
+   background-color: green;
+   padding: 10px;
+ }
+  
+  #chat{
+    color:rgb(6, 14, 6);  
+  }
+  #page5 label{
+    margin: 10px 0;
+    padding: 10px;
+    color: rgb(187, 180, 180);
+    border-radius: 10px;
+  
+  }
+  
+  
+  .text-right{
+    text-align: right;
+    margin:10px 5px;
+   
+  
+  
+  }
+  .text-left{
+    text-align: left;
+    margin: 10px 5px;
+    
+    }
+  .current-user{
+    background-color:#043927;
+    border: 2px solid #0c2402;
+   
+  }
+  
+  .old-user{
+    background-color:#3a3b3d;
+    border: 2px solid #3a3b3d;
+    display: inline-flex;
+  
+  }
+  small{
+    color:aqua;
+  }
+   
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+#page6{
+    display: none;
+   background-image: url(db.webp);
+  height: 95vh;
+  color: white;
+  font-size: 30px;
+  
+}
+#unlike:hover{
+background-color:red;
+}
+#like:hover{
+    background-color: red;
+}
+#container {
+  text-align: center;
+  display: block;
+  height: 75vh;
+}
+#logContainer{
+  display: flex;
+  justify-content: center;
+}
+#logout-button1{
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+#unlike {
+  cursor: pointer;
+  background-color: wheat;
+border: none;
+}
+
+#like {
+  cursor: pointer;
+
+}
+#head1{
+  padding: 10px;
+  background-color:green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+#buttons {
+  display: flex;
+  justify-content: center;
+
+}
+
+#head2 {
+  color: wheat;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+#page7 {
+    display: none;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color:wheat;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+#page7 p button{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+#save div {
+  margin: 20px auto;
+  width: 400px;
+  padding: 10px;
+ background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for the input fields */
+#save input {
+  display: block;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for the save button */
+#save button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ /* float: right;*/
+}
+
+/* Style for the save button on hover */
+#save button:hover {
+  background-color: #45a049;
+}
+

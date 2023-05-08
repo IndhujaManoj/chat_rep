@@ -5,13 +5,10 @@ function hideLogin() {
 function hideReg() {
     document.getElementById('page2').style.display = "none"
     document.getElementById('page1').style.display = "block"
-
 }
 function loading() {
     document.getElementById('page1').style.display = "none"
     document.getElementById('page4').style.display = "block"
-
-
 }
 function chatLogout() {
     document.getElementById('page4').style.display = "none"
@@ -20,7 +17,6 @@ function chatLogout() {
 function profileChanged() {
     document.getElementById('page7').style.display = "none"
     document.getElementById('page1').style.display = "block"
-
 }
 function inputClear() {
     document.getElementById("no").value = ""
@@ -29,16 +25,17 @@ function inputClear() {
     document.getElementById("mail").value = ""
     document.getElementById("name").value = ""
 }
-//chat
-
+function newsLogout(){
+    document.getElementById('page6').style.display='none'
+    document.getElementById('page4').style.display='block'
+}
 function msgimg() {
     document.getElementById("page4").style.display = "none"
     document.getElementById('page5').style.display = "block"
 }
 function chatLogout() {
     document.getElementById('page5').style.display = "none"
-    document.getElementById('page1').style.display = "block"
-
+    document.getElementById('page4').style.display = "block"
 }
 function news() {
     document.getElementById("page4").style.display = "none"
@@ -48,6 +45,11 @@ function profile() {
     document.getElementById("page4").style.display = "none"
     document.getElementById('page7').style.display = "block"
 }
+function mainLogButton(){
+    document.getElementById("page4").style.display="none"
+    document.getElementById('page1').style.display = "block"
+
+}
 let index = ''
 //login page
 function loginHandling(event) {
@@ -55,12 +57,18 @@ function loginHandling(event) {
     let username = document.getElementById('uname').value;
     let password = document.getElementById('password').value;
 
+    let foundUser=false
     for (let user of regUsers) {
         if (user.username === username && user.password === password) {
             index = regUsers.indexOf(user)
             alert('login successfull!')
             loading()
+            foundUser = true;
+            break;
         }
+    }
+    if (!foundUser) {
+        alert('Invalid username or password');
     }
 }
 //register form
@@ -127,7 +135,10 @@ function registation(event) {
         regUsers.push(myobj)
         console.log(regUsers, "reg")
     }
-}/*
+    inputClear()
+
+    hideReg()
+}
 var messageInput = document.getElementById("message-input");
 let logoutButton = document.getElementById('logout-button')
 var username = document.getElementById('uname').value;
@@ -139,52 +150,7 @@ imgChat.addEventListener('click', messageInputfun)
 function messageInputfun() {
 
     msgimg()
-    logoutButton.addEventListener('click', function (event) {
-        event.preventDefault()
-        chatLogout()
-    })
-    function addMessage() {
-        let username = document.getElementById('uname').value;
-
-        myArray.push({ [username]: messageInput.value })
-        console.log(myArray,"my")
-        messageInput.value = '';
-        display()
-    }
-    function display() {
-        let username = document.getElementById('uname').value;
-        let messages = ""
-        console.log(myArray,"a")
-       for (let i = 0; i <myArray.length; i++) {
-        if (Object.keys(myArray[i]) == username) {
-               messages += `<div class="text-right "><label class="current-user">${Object.values(myArray[i])}</label></div></br>`
-          } else {
-
-                messages += `<div class="text-left"><label class="old-user"><small>${Object.keys(myArray[i])}</small></br>${Object.values(myArray[i])}</label></div></br>`
-            }
-        }
-        var chatContainer = document.getElementById("chat")
-
-        chatContainer.innerHTML = messages;
-        let chat = document.getElementById('chat-container')
-        chat.scrollTop = chat.scrollHeight;
-    }
-    var sendButton = document.getElementById("send-button");
-    sendButton.addEventListener("click", addMessage);
-    display()
-}*/
-var messageInput = document.getElementById("message-input");
-let logoutButton = document.getElementById('logout-button')
-var username = document.getElementById('uname').value;
-
-var myArray = []
-
-imgChat = document.getElementById('img1')
-imgChat.addEventListener('click', messageInputfun)
-function messageInputfun() {
-
-    msgimg()
-    logoutButton.addEventListener('click', chatLogouts) 
+    logoutButton.addEventListener('click', chatLogout) 
 
     function addMessage() {
         let username = document.getElementById('uname').value;
@@ -193,25 +159,7 @@ function messageInputfun() {
         console.log(myArray,"my")
         messageInput.value = '';
         display()
-    }/*
-    function display() {
-        let username = document.getElementById('uname').value;
-        let messages = ""
-        console.log(myArray,"a")
-       for (let i = 0; i <myArray.length; i++) {
-        if (Object.keys(myArray[i]) == username) {
-               messages += `<div class="text-right "><label class="current-user">${Object.values(myArray[i])}</label></div></br>`
-          } else {
-
-                messages += `<div class="text-left"><label class="old-user"><small>${Object.keys(myArray[i])}</small></br>${Object.values(myArray[i])}</label></div></br>`
-            }
-        }
-        var chatContainer = document.getElementById("chat")
-
-        chatContainer.innerHTML = messages;
-        let chat = document.getElementById('chat-container')
-        chat.scrollTop = chat.scrollHeight;
-    }*/
+    }
     function display() {
         let username = document.getElementById('uname').value;
         let messages = ""
@@ -237,13 +185,6 @@ function messageInputfun() {
     display()
 
 }
-function chatLogouts() {
-    // Clear the myArray array
-   // myArray = [];
-    chatLogout()
-
-    // Do other logout actions
-}
 
 //news
 let imgNews = document.getElementById('img2')
@@ -258,8 +199,8 @@ let lastClick = []
 function uptades() {
     let container = document.getElementById('container');
     container.style.display = 'none'
-    let tabutton = document.getElementById('head1')
-    tabutton.style.display = "none"
+    let tabutton=document.getElementById('head1')
+         tabutton.style.display="none"
     for (i = 0; i < likeArray.length; i++) {
         my_likes = likeArray[i]
 
@@ -297,7 +238,7 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://timesofindia.indiati
         let items = data.items;
         let titles = ''
         for (let i = 0; i < items.length; i++) {
-            titles += items[i].title + `<img src="/images/like.png" id="like" class="like-btn"><img src="/images/images.png" id="unlike" class="unlike-btn"></br> </br>`
+            titles += items[i].title + `<img src="like.png" id="like" class="like-btn"><img src="un.png" id="unlike" class="unlike-btn"></br> </br>`
         }
         display.innerHTML = titles
         let like_btn = document.querySelectorAll('.like-btn')
@@ -325,14 +266,14 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://timesofindia.indiati
     .catch(error => console.error(error));
 
 //profile
-let profileimg = document.getElementById('avatar')
+let profileimg = document.getElementById('avatar');
 profileimg.addEventListener('click', profileShow)
 function profileShow() {
     profile()
     username = document.getElementById('uname').value;
-    document.getElementById('head').innerHTML = username
+    document.getElementById('head').innerHTML = username;
 }
-function pass() {
+function profileChange() {
     const newUsernameInput = document.createElement("input");
     const newPasswordInput = document.createElement("input");
     newUsernameInput.type = "text";

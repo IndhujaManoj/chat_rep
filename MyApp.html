@@ -17,25 +17,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CHAT</title>
-        <link rel="stylesheet" href="chatapp.css">
+        <link rel="stylesheet" href="MyApp.css">
     </head>
 
     <body>
         <h1 id="first">WELCOME TO CHAT APPLICATION</h1>
         <div id="page1">
             <form id="loginpg">
+                <div class="iconimg">
+                    <img src="icon2.png" id="i-img1">
+                </div>
                 <h2 id="loghead">LOGIN PAGE</h2>
-                <label for="name" style="color: black;"> NAME : </label><input type="text" id="uname"><br>
-                <label for="password" style="color: black;">PASSWORD : </label><input type="password" id="password"><br>
+
+                <label for="name" style="color:wheat;"> NAME : </label><input type="text" id="uname"><br>
+                <label for="password" style="color: wheat;">PASSWORD : </label><input type="password" id="password"><br>
 
                 <button type="button" onclick="loginHandling(event)" id="loginButton">login</button>
-                <button type="button" id="log" onclick="hideLogin()">Create account</button>
+                <a id="log" onclick="hideLogin()">Create account</a>
 
             </form>
         </div>
         <div id="page2">
             <form id="form2">
-                        <h2 id="reg">Registation Page</h2>
+                <h2 id="reg">Registation Page</h2>
 
                 <div id="1">
                     <label>USERNAME : </label><input style="padding-left: 28px;" type="text" id="name">
@@ -61,8 +65,9 @@
                     <label>PHONE NO : </label><input type="number" id="no" placeholder="Enter 10 digit Phone No">
                     <div id="n5" style="color: red"></div><br><br>
                 </div>
-                <div style="display: flex;justify-content: center;">
-                    <button type="button" id="regbut" onclick="hideReg(),registation(event),inputClear()">Submit</button>
+                <div style="display: flex">
+                    <button type="button" id="regbut"
+                        onclick=registation(event)>Submit</button>
                 </div>
             </form>
         </div>
@@ -70,20 +75,24 @@
             <div class="head">
                 <h1 id="app">CHAT APPLICATION</h1>
                 <div class="ava">
-                    <img src="/images/avatar.jpeg" alt="avatar" class="avatar" id="avatar">
+                    <img src="avatar.jpeg" alt="avatar" class="avatar" id="avatar">
                     <h2 class="h2">Profile</h2>
                 </div>
                 <div class="img">
-                    <img src="/images/chat.png" class="rounded float-left" alt="chat" width="450px" id="img1">
-                    <img src="/images/news.png" class="rounded float-right" alt="news" width="500px" id="img2">
+                    <img src="chat.png" class="rounded float-left" alt="chat" width="450px" id="img1">
+                    <img src="news.png" class="rounded float-right" alt="news" width="500px" id="img2">
                 </div>
+            </div>
+            <div id="mainlog">
+                <button id="outPage" onclick="mainLogButton()">Logout</button>
+
             </div>
         </div>
         <div id="page5">
             <h1 class="gp">Group Chat</h1>
             <div id="chat-container">
                 <div id="chat"></div>
-    
+
             </div>
             <div id="input-container">
                 <div class="input">
@@ -91,40 +100,44 @@
                     <button id="send-button">Send</button>
                 </div>
             </div>
-             <div class="logout">
-                <button id="logout-button">logout</button>
+            <div class="logout">
+                <button id="logout-button" onclick="chatLogout()">Home</button>
             </div>
         </div>
         <div id="page6">
             <div id="show">
-            
+
                 <div id="body">
-                  <div id="container"></div>
+                    <div id="container"></div>
                 </div>
                 <div id="buttons">
-                    <button id="head1" onclick="uptades()">Likes & unlike</button>
+                    <button href="" id="head1" onclick="uptades()">Likes & unlike</button>
                 </div>
                 <table id="table"></table>
                 <table id="unlikes"></table>
-                   </div>
+                <div id="logContainer">
+                <button id="logout-button1" onclick="newsLogout()">Home</button>
+</div>
+            </div>
         </div>
         <div id="page7">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <div class="card">
-          <img src="/images/avatar.jpeg" alt="John" style="width:100%">
-          <h1 id="head"></h1>
-          <p class="title">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          
-          <p><button onclick="pass()">update profile</button></p>
-        </div>
-        </div>
-        </body>
-        
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="chatapp.js"></script>
-       
+            <div class="card">
+                <img src="avatar.jpeg" alt="John" style="width:100%">
+                <h1 id="head"></h1>
+                <p class="title">CEO & Founder, Example</p>
+                <p>Harvard University</p>
+
+                <p><button onclick="profileChange()">update profile</button></p>
+            </div>
+        </div>
+    </body>
+
+
+    <script src="MyApp.js"></script>
+
 
 
     </html>
