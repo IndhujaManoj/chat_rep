@@ -80,7 +80,6 @@ function loginHandling(event) {
 let regUsers = []
 function registerUser(event) {
     event.preventDefault();
-  
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("mail");
     const passwordInput = document.getElementById("psw");
